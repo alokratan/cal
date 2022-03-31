@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><center> <div class="tabcon">
+<div class="calcul">
+    <h3>CALCULATOR</h3>
+</div>
+    <table>
+        <tr><td colspan="4">  <input type="text" id="result"/></td></tr>
+        <tr><td> <div class="inptag1"><input type="button" value="%" onclick="dis('%')"/></div>  </td><td><div class="inptag1"><input type="button" value="(" onclick="dis('(')"/> </div></td><td><div class="inptag1"><input type="button" value=")" onclick="dis(')')"/></div> </td><td><div class="inptag1"><input type="button" value="C" onclick="clr()"/> </div></td></tr>
+        <tr><td> <div class="inptag"><input type="button" value="7" onclick="dis('7')"/></div>  </td><td><div class="inptag"><input type="button" value="8" onclick="dis('8')"/> </div></td><td><div class="inptag"><input type="button" value="9" onclick="dis('9')"/></div> </td><td><div class="inptag1"><input type="button" value="/" onclick="dis('/')"/></div></td></tr>
+        <tr><td> <div class="inptag"><input type="button" value="4" onclick="dis('4')"/></div>  </td><td><div class="inptag"><input type="button" value="5" onclick="dis('5')"/> </div></td><td><div class="inptag"><input type="button" value="6" onclick="dis('6')"/></div> </td><td><div class="inptag1"><input type="button" value="*" onclick="dis('*')"/></div></td></tr>
+        <tr><td> <div class="inptag"><input type="button" value="1" onclick="dis('1')"/> </div> </td><td><div class="inptag"><input type="button" value="2" onclick="dis('2')"/></div> </td><td><div class="inptag"><input type="button" value="3" onclick="dis('3')"/></div> </td><td><div class="inptag1"><input type="button" value="-" onclick="dis('-')"/></div></td></tr>
+        <tr><td> <div class="inptag"><input type="button" value="." onclick="dis('.')"/></div>  </td><td><div class="inptag"><input type="button" value="0" onclick="dis('0')"/></div> </td><td><div class="inptag"><input type="button" value="=" onclick="res()"/></div> </td><td><div class="inptag1"><input type="button" value="+" onclick="dis('+')"/></div></td></tr>
+
+    </table>
+</div>
+<style>
+    body{
+        background-color: rgb(255, 255, 255);
+        
+        
+    }
+    .calcul{
+        width: 6cm;
+        height:1cm;
+    
+        
+
+    }
+    .calcul h3{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        letter-spacing: 0.4mm;
+        font-size: 0.6cm;
+        padding: 10px 10px;
+        background-color: rgb(63, 63, 63);
+        border-radius: 10px 10px;
+
+        
+    }
+    .tabcon{
+        background-color: rgb(0, 0, 0);
+        height: 17cm;
+        width: 10cm;
+        border-radius: 10px 10px;
+        border: 2px solid black;
+
+    }
+    table{
+        margin-top: 0cm;
+        padding: 10px;
+       
+    }
+    input{
+        font-size: 20px;
+        padding: 17px;
+        background-color: rgba(122, 0, 0, 0);
+        color: rgb(255, 255, 255);
+        border: none;
+       
+    }
+    .inptag{
+        background-color: rgb(72, 209, 145);
+        color: aliceblue;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 15px;
+        border-radius: 50%;
+     
+    }
+    .inptag1{
+        background-color: rgb(238, 60, 60);
+        color: aliceblue;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 15px;
+        border-radius: 50%;
+  
+    }
+    
+    
+    #result{
+        width: 90%;
+        height: 3cm;
+        background-color: rgb(0, 0, 0);
+        text-align: end;
+        font-size: 2cm;
+        
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 200;
+    }
+   
+</style>
+
+    <script>
+function dis(val){
+    document.getElementById("result").value+=val;
+}
+function res(){
+
+    let x=document.getElementById("result").value;
+    document.getElementById("result").value=eval(x);
+}
+function clr(val){
+    document.getElementById("result").value="";
+}
+
+
+    </script>
+</body>
+</html>
